@@ -5,6 +5,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>yeb-server</module>
+        <module>generator</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

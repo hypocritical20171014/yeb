@@ -7,7 +7,7 @@ spring: # 数据源配置
     url: jdbc:mysql://localhost:3306/yeb?
     useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
     username: root
-    password: root
+    password:
     hikari:
       # 连接池名
       pool-name: DateHikariCP
@@ -40,3 +40,13 @@ mybatis-plus:
 logging:
   level:
     com.xxxx.server.mapper: debug
+
+jwt:
+  # JWT存储的请求头
+  tokenHeader: Authorization
+  # JWT 加解密使用的密钥
+  secret: yeb-secret
+  # JWT的超期限时间（60*60*24）
+  expiration: 604800
+  # JWT 负载中拿到开头
+  tokenHead: Bearer
